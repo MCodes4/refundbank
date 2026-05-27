@@ -1,0 +1,37 @@
+project_id = "cslhekwiuksvjwezaevh"
+
+[api]
+enabled = true
+port = 54321
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 17
+
+[studio]
+enabled = true
+port = 54323
+
+[inbucket]
+enabled = true
+port = 54324
+
+[storage]
+enabled = true
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+
+[functions.claim-fees]
+verify_jwt = false
+
+[functions.scan-holders]
+verify_jwt = false
+
+[functions.distribute]
+verify_jwt = false
+
+# Cron jobs — runs on pg_cron inside Supabase
+# These are configured via SQL (see migrations/002_cron_jobs.sql)
