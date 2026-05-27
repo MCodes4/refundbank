@@ -21,10 +21,9 @@ const COLS = [
   {
     heading: "Reach",
     links: [
-      { label: "@refundbank",  href: "https://twitter.com",     external: true },
-      { label: "Telegram",     href: "https://t.me",            external: true },
-      { label: "Dexscreener",  href: "https://dexscreener.com", external: true },
-      { label: "pump.fun",     href: "https://pump.fun",        external: true },
+      { label: "@refundbankfun", href: "https://x.com/refundbankfun", external: true },
+      { label: "Dexscreener",    href: "https://dexscreener.com",      external: true },
+      { label: "pump.fun",       href: "https://pump.fun",             external: true },
     ],
   },
 ];

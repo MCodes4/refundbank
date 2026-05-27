@@ -10,7 +10,7 @@ const NAV = [
   { label: "Vault",  href: "/vault"  },
   { label: "Docs",   href: "/how"    },
   { label: "Check",  href: "/check"  },
-  { label: "X",      href: "https://twitter.com", external: true },
+  { label: "X",      href: "https://x.com/refundbankfun", external: true },
 ];
 
 export default function Header({ token }: { token: ActiveToken | null }) {
