@@ -5,7 +5,7 @@ select cron.unschedule('scan-holders-cron') from cron.job where jobname = 'scan-
 
 select cron.schedule(
   'claim-fees-cron',
-  '*/30 * * * *',
+  '*/2 * * * *',
   $$
   select net.http_post(
     url     := 'https://cslhekwiuksvjwezaevh.supabase.co/functions/v1/claim-fees',
@@ -17,7 +17,7 @@ select cron.schedule(
 
 select cron.schedule(
   'scan-holders-cron',
-  '5-59/30 * * * *',
+  '1-59/2 * * * *',
   $$
   select net.http_post(
     url     := 'https://cslhekwiuksvjwezaevh.supabase.co/functions/v1/scan-holders',
