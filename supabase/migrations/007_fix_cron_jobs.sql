@@ -1,4 +1,4 @@
--- pg_cron jobs — run every 2 minutes
+-- Fix cron jobs: replace detect-token (wrong name) with detect-new-launch
 
 select cron.unschedule('detect-token-cron')      from cron.job where jobname = 'detect-token-cron';
 select cron.unschedule('detect-new-launch-cron') from cron.job where jobname = 'detect-new-launch-cron';
