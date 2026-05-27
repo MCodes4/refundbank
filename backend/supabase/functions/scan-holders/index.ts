@@ -165,8 +165,22 @@ serve(async () => {
     }
 
     const heliusApiKey = Deno.env.get("HELIUS_API_KEY")!;
-    const mintAddress = Deno.env.get("TOKEN_MINT_ADDRESS")!;
     const network = Deno.env.get("SOLANA_NETWORK") ?? "devnet";
+
+    // Read active mint from DB (falls back to env var for initial setup)
+    const { data: activeToken } = await supabase
+      .from("active_token")
+      .select("mint_address")
+      .eq("is_active", true)
+      .single();
+
+    const mintAddress = activeToken?.mint_address ?? Deno.env.get("TOKEN_MINT_ADDRESS");
+    if (!mintAddress) {
+      return new Response(JSON.stringify({ skipped: true, reason: "no active token" }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
 
     // On devnet tokens have no real price — use 0
     const pricePerTokenInSol = network === "mainnet" ? await getTokenPrice(mintAddress, heliusApiKey) : 0;

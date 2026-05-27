@@ -63,7 +63,20 @@ serve(async (req) => {
     const privateKeyB58 = Deno.env.get("CREATOR_WALLET_PRIVATE_KEY")!;
     const creatorKeypair = Keypair.fromSecretKey(bs58.decode(privateKeyB58));
 
-    const mintAddress = Deno.env.get("TOKEN_MINT_ADDRESS")!;
+    // Read active mint from DB (falls back to env var for initial setup)
+    const { data: activeToken } = await supabase
+      .from("active_token")
+      .select("mint_address")
+      .eq("is_active", true)
+      .single();
+
+    const mintAddress = activeToken?.mint_address ?? Deno.env.get("TOKEN_MINT_ADDRESS")!;
+    if (!mintAddress) {
+      return new Response(JSON.stringify({ skipped: true, reason: "no active token" }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
     const mint = new PublicKey(mintAddress);
 
     const creatorFeeAccount = getCreatorFeeAccount(mint, creatorKeypair.publicKey);
@@ -103,6 +116,7 @@ serve(async (req) => {
     await supabase.from("fee_claims").insert({
       amount_sol: claimableSOL,
       tx_signature: signature,
+      mint_address: mintAddress,
     });
 
     // Trigger distribute function asynchronously
