@@ -35,14 +35,13 @@ export default function FinalCTA() {
           className="inline-block text-sm transition-all duration-150"
           style={{
             fontFamily: "Inter, sans-serif",
-            color: "var(--gold)",
-            border: "1px solid rgba(212,175,55,0.4)",
-            borderRadius: "4px",
+            color: "var(--surface)",
+            background: "var(--text-1)",
+            borderRadius: "3px",
             padding: "10px 22px",
-            background: "rgba(212,175,55,0.07)",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(212,175,55,0.13)")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(212,175,55,0.07)")}
+          onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.8")}
+          onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
         >
           View on pump.fun
         </a>

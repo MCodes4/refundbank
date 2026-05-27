@@ -25,20 +25,20 @@ export default function WhyThisExists() {
         >
           <p>
             Memecoins reward speed. Snipe early, dump on retail, move on. The people
-            who believe in the project — who hold through the dump, who buy more at
-            the bottom — get punished. They are the exit liquidity. They are the
+            who believe in the project, who hold through the dump, who buy more at
+            the bottom, get punished. They are the exit liquidity. They are the
             bagholders.
           </p>
           <p>
             RefundBank inverts the geometry. The deeper your bag, the more the
-            protocol pays you. Not as charity. As mechanism. Every trade — yours,
-            mine, the sniper's — funds the refund pool. Every two minutes, the pool
+            protocol pays you. Not as charity. As mechanism. Every trade, yours,
+            mine, the sniper's, funds the refund pool. Every two minutes, the pool
             empties to whoever is bleeding hardest.
           </p>
           <p>
             The system has no opinion about whether you should be holding. It just
-            notices that you are, and that you are down, and it sends you SOL. That's
-            all a bank is supposed to do.
+            notices that you are, and that you are down, and it sends you SOL. That
+            is all a bank is supposed to do.
           </p>
         </div>
       </div>

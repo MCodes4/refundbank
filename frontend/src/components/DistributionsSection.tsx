@@ -52,7 +52,7 @@ function Countdown() {
           fontFamily: "JetBrains Mono, monospace",
           fontSize: "16px",
           fontWeight: 500,
-          color: secs <= 30 ? "var(--green)" : "var(--gold)",
+          color: secs <= 30 ? "var(--green)" : "var(--text-1)",
           letterSpacing: "-0.02em",
         }}
       >
@@ -86,7 +86,6 @@ export default function DistributionsSection({ distributions, loading }: Props) 
       className={`reveal ${inView ? "visible" : ""}`}
       style={{ borderTop: "1px solid var(--border)" }}
     >
-      {/* Header */}
       <div className="px-6 sm:px-8 pt-8 pb-4 flex items-start justify-between gap-4">
         <div>
           <h2
@@ -104,7 +103,6 @@ export default function DistributionsSection({ distributions, loading }: Props) 
         </div>
       </div>
 
-      {/* Feed */}
       <div style={{ borderTop: "1px solid var(--border)" }}>
         {loading ? (
           Array.from({ length: 6 }).map((_, i) => (
@@ -137,14 +135,13 @@ export default function DistributionsSection({ distributions, loading }: Props) 
                 className="px-6 sm:px-8 py-4 flex items-start justify-between gap-4"
                 style={{ borderBottom: "1px solid var(--border)" }}
               >
-                {/* Left: indicator + wallet + timestamp */}
                 <div className="flex items-start gap-3 min-w-0">
                   <span
                     style={{
                       fontFamily: "JetBrains Mono, monospace",
                       fontSize: "10px",
                       color: "var(--green)",
-                      opacity: 0.55,
+                      opacity: 0.7,
                       marginTop: "1px",
                       flexShrink: 0,
                     }}
@@ -159,7 +156,7 @@ export default function DistributionsSection({ distributions, loading }: Props) 
                             fontFamily: "JetBrains Mono, monospace",
                             fontSize: "9px",
                             color: "var(--green)",
-                            border: "1px solid rgba(0,214,122,0.3)",
+                            border: "1px solid rgba(22,163,74,0.3)",
                             borderRadius: "3px",
                             padding: "1px 5px",
                             letterSpacing: "0.06em",
@@ -198,7 +195,6 @@ export default function DistributionsSection({ distributions, loading }: Props) 
                   </div>
                 </div>
 
-                {/* Right: amount + tx link */}
                 <div className="flex items-center gap-4 flex-shrink-0">
                   <span
                     style={{

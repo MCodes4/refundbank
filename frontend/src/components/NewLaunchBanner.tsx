@@ -8,19 +8,19 @@ interface Props {
 }
 
 export default function NewLaunchBanner({ token, onDismiss }: Props) {
-  const ticker = token.symbol ? `$${token.symbol}` : token.mint_address.slice(0, 8) + "…";
+  const ticker = token.symbol ? `$${token.symbol}` : token.mint_address.slice(0, 8) + "...";
 
   return (
     <div
       className="fixed top-14 left-0 right-0 z-40 flex items-center justify-between gap-4 px-5 sm:px-8 py-2.5"
       style={{
-        background:   "rgba(0, 214, 122, 0.10)",
-        borderBottom: "1px solid rgba(0, 214, 122, 0.2)",
+        background:   "rgba(22,163,74,0.07)",
+        borderBottom: "1px solid rgba(22,163,74,0.18)",
         backdropFilter: "blur(8px)",
       }}
     >
       <div className="flex items-center gap-3">
-        <span className="live-dot" style={{ background: "var(--green)" }} />
+        <span className="live-dot" />
         <span
           style={{
             fontFamily: "JetBrains Mono, monospace",
@@ -28,7 +28,7 @@ export default function NewLaunchBanner({ token, onDismiss }: Props) {
             color:      "var(--green)",
           }}
         >
-          New launch detected: {ticker} — vault reset
+          New launch detected: {ticker}. Vault reset.
         </span>
         {token.pump_fun_url && (
           <a
@@ -38,11 +38,11 @@ export default function NewLaunchBanner({ token, onDismiss }: Props) {
             style={{
               fontFamily:  "JetBrains Mono, monospace",
               fontSize:    "10px",
-              color:       "rgba(0,214,122,0.6)",
+              color:       "rgba(22,163,74,0.6)",
               textDecoration: "none",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "var(--green)")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(0,214,122,0.6)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(22,163,74,0.6)")}
           >
             pump.fun ↗
           </a>
@@ -53,16 +53,16 @@ export default function NewLaunchBanner({ token, onDismiss }: Props) {
         style={{
           fontFamily: "JetBrains Mono, monospace",
           fontSize:   "10px",
-          color:      "rgba(0,214,122,0.5)",
+          color:      "rgba(22,163,74,0.5)",
           background: "transparent",
           border:     "none",
           cursor:     "pointer",
           padding:    "2px 4px",
         }}
         onMouseEnter={(e) => (e.currentTarget.style.color = "var(--green)")}
-        onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(0,214,122,0.5)")}
+        onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(22,163,74,0.5)")}
       >
-        ✕
+        x
       </button>
     </div>
   );

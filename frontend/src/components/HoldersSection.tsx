@@ -21,7 +21,6 @@ export default function HoldersSection({ holders, loading }: Props) {
       className={`reveal ${inView ? "visible" : ""}`}
       style={{ borderTop: "1px solid var(--border)" }}
     >
-      {/* Header */}
       <div className="px-6 sm:px-8 pt-8 pb-4">
         <h2
           className="section-label text-xl font-medium"
@@ -34,7 +33,6 @@ export default function HoldersSection({ holders, loading }: Props) {
         </p>
       </div>
 
-      {/* List */}
       <div style={{ borderTop: "1px solid var(--border)" }}>
         {loading ? (
           Array.from({ length: 8 }).map((_, i) => (
@@ -72,15 +70,13 @@ export default function HoldersSection({ holders, loading }: Props) {
                 className="px-6 sm:px-8 py-4"
                 style={{ borderBottom: "1px solid var(--border)" }}
               >
-                {/* Row top */}
                 <div className="flex items-start justify-between gap-4">
-                  {/* Left: rank + wallet */}
                   <div className="flex items-center gap-3 min-w-0">
                     <span
                       style={{
                         fontFamily: "JetBrains Mono, monospace",
                         fontSize: isTop ? "14px" : "11px",
-                        color: isTop ? "var(--gold)" : "var(--text-3)",
+                        color: isTop ? "var(--text-1)" : "var(--text-3)",
                         fontWeight: isTop ? 500 : 400,
                         flexShrink: 0,
                         width: "1.5rem",
@@ -106,7 +102,6 @@ export default function HoldersSection({ holders, loading }: Props) {
                     </a>
                   </div>
 
-                  {/* Right: stats */}
                   <div className="flex items-center gap-5 flex-shrink-0">
                     <div className="text-right hidden sm:block">
                       <div
@@ -166,8 +161,8 @@ export default function HoldersSection({ holders, loading }: Props) {
                         style={{
                           fontFamily: "JetBrains Mono, monospace",
                           fontSize: "12px",
-                          color: "var(--gold)",
-                          opacity: 0.9,
+                          color: "var(--text-1)",
+                          opacity: 0.8,
                         }}
                       >
                         {share.toFixed(1)}%
@@ -176,7 +171,6 @@ export default function HoldersSection({ holders, loading }: Props) {
                   </div>
                 </div>
 
-                {/* Progress bar */}
                 <div className="mt-3 ml-9">
                   <div className="progress-bar">
                     <div

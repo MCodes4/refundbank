@@ -12,10 +12,10 @@ const COLS = [
   {
     heading: "Product",
     links: [
-      { label: "The ledger",   href: "#ledger" },
-      { label: "The queue",    href: "#queue" },
-      { label: "How it works", href: "#how" },
-      { label: "Check wallet", href: "#check" },
+      { label: "The ledger",   href: "/ledger" },
+      { label: "The queue",    href: "/ledger#queue" },
+      { label: "How it works", href: "/how" },
+      { label: "Check wallet", href: "/check" },
     ],
   },
   {
@@ -41,7 +41,6 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
       .limit(10)
       .then(async ({ data }) => {
         if (!data?.length) return;
-        // For each inactive token, sum its distributions
         const enriched = await Promise.all(
           data.map(async (t) => {
             const { data: dists } = await supabase
@@ -58,12 +57,9 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
   }, []);
 
   return (
-    <footer
-      style={{ borderTop: "1px solid var(--border)" }}
-    >
+    <footer style={{ borderTop: "1px solid var(--border)" }}>
       <div className="px-6 sm:px-8 pt-12 pb-10">
         <div className="grid sm:grid-cols-3 gap-10 mb-12">
-          {/* Brand */}
           <div className="space-y-4">
             <p
               style={{
@@ -72,7 +68,7 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
                 color: "var(--text-1)",
               }}
             >
-              refundbank<span style={{ color: "var(--gold)" }}>.</span>
+              refundbank.
             </p>
             <p
               className="text-sm leading-relaxed"
@@ -96,12 +92,11 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
                 onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-2)")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-3)")}
               >
-                {activeMint.slice(0, 8)}…{activeMint.slice(-6)} ↗
+                {activeMint.slice(0, 8)}...{activeMint.slice(-6)} ↗
               </a>
             )}
           </div>
 
-          {/* Link columns */}
           {COLS.map((col) => (
             <div key={col.heading} className="space-y-4">
               <p
@@ -118,22 +113,22 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
                 {col.links.map(({ label, href, ...rest }) => {
                   const external = "external" in rest ? rest.external : false;
                   return (
-                  <a
-                    key={label}
-                    href={href}
-                    target={external ? "_blank" : undefined}
-                    rel={external ? "noopener noreferrer" : undefined}
-                    className="block text-sm transition-colors duration-150"
-                    style={{
-                      color: "var(--text-3)",
-                      fontFamily: "Inter, sans-serif",
-                      textDecoration: "none",
-                    }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-1)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-3)")}
-                  >
-                    {label}
-                  </a>
+                    <a
+                      key={label}
+                      href={href}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noopener noreferrer" : undefined}
+                      className="block text-sm transition-colors duration-150"
+                      style={{
+                        color: "var(--text-3)",
+                        fontFamily: "Inter, sans-serif",
+                        textDecoration: "none",
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-1)")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-3)")}
+                    >
+                      {label}
+                    </a>
                   );
                 })}
               </div>
@@ -141,7 +136,6 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
           ))}
         </div>
 
-        {/* Previous launches */}
         {prev.length > 0 && (
           <div className="mb-10">
             <p
@@ -166,7 +160,7 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
                         color:      "var(--text-2)",
                       }}
                     >
-                      {t.symbol ? `$${t.symbol}` : t.mint_address.slice(0, 8) + "…"}
+                      {t.symbol ? `$${t.symbol}` : t.mint_address.slice(0, 8) + "..."}
                       {t.name && (
                         <span style={{ color: "var(--text-3)", marginLeft: "6px" }}>
                           {t.name}
@@ -210,7 +204,6 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
           </div>
         )}
 
-        {/* Bottom strip */}
         <div
           className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-8"
           style={{ borderTop: "1px solid var(--border)" }}

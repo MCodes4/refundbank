@@ -2,22 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Variables ──────────────────────────────────────────────────── */
 :root {
-  --bg:      #0A0E14;
-  --surface: #11161F;
-  --gold:    #D4AF37;
-  --gold-dim: rgba(212, 175, 55, 0.08);
-  --green:   #00D67A;
-  --red:     #C73E3A;
-  --text-1:  #FFFFFF;
-  --text-2:  #8B92A8;
-  --text-3:  #3A4055;
-  --border:  rgba(255, 255, 255, 0.06);
-  --border-2: rgba(255, 255, 255, 0.11);
+  --bg:       #F8F8F8;
+  --surface:  #FFFFFF;
+  --text-1:   #0A0A0A;
+  --text-2:   #4A4A4A;
+  --text-3:   #9A9A9A;
+  --border:   rgba(0, 0, 0, 0.08);
+  --border-2: rgba(0, 0, 0, 0.14);
+  --green:    #16A34A;
+  --red:      #DC2626;
 }
 
-/* ─── Base ───────────────────────────────────────────────────────── */
 html { scroll-behavior: smooth; }
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -29,13 +25,11 @@ body {
   line-height: 1.65;
 }
 
-/* ─── Section heading accent ─────────────────────────────────────── */
 .section-label {
-  border-left: 2px solid var(--gold);
+  border-left: 2px solid var(--text-1);
   padding-left: 0.875rem;
 }
 
-/* ─── Reveal on scroll ───────────────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -44,7 +38,6 @@ body {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ─── Live dot ───────────────────────────────────────────────────── */
 @keyframes dot-pulse {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.25; }
@@ -58,7 +51,6 @@ body {
   flex-shrink: 0;
 }
 
-/* ─── Skeleton ───────────────────────────────────────────────────── */
 @keyframes shimmer {
   0%   { background-position: -400px 0; }
   100% { background-position:  400px 0; }
@@ -66,15 +58,14 @@ body {
 .skeleton {
   display: inline-block;
   background: linear-gradient(90deg,
-    rgba(255,255,255,0.04) 0%,
-    rgba(255,255,255,0.08) 50%,
-    rgba(255,255,255,0.04) 100%);
+    rgba(0,0,0,0.04) 0%,
+    rgba(0,0,0,0.08) 50%,
+    rgba(0,0,0,0.04) 100%);
   background-size: 400px 100%;
   animation: shimmer 1.6s ease-in-out infinite;
   border-radius: 3px;
 }
 
-/* ─── Ticker tape ────────────────────────────────────────────────── */
 @keyframes ticker {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -85,15 +76,13 @@ body {
 }
 .ticker-track:hover { animation-play-state: paused; }
 
-/* ─── Row dividers ───────────────────────────────────────────────── */
 .ledger-row {
   border-bottom: 1px solid var(--border);
   transition: background 0.12s ease;
 }
 .ledger-row:last-child { border-bottom: none; }
-.ledger-row:hover { background: rgba(255,255,255,0.02); }
+.ledger-row:hover { background: rgba(0,0,0,0.02); }
 
-/* ─── Progress bar ───────────────────────────────────────────────── */
 .progress-bar {
   height: 2px;
   background: var(--border);
@@ -103,12 +92,11 @@ body {
 }
 .progress-fill {
   height: 100%;
-  background: var(--gold);
+  background: var(--text-1);
   border-radius: 1px;
   transition: width 1s cubic-bezier(0.16,1,0.3,1);
 }
 
-/* ─── Copy row ───────────────────────────────────────────────────── */
 .copy-icon {
   opacity: 0;
   transition: opacity 0.12s ease;
@@ -116,7 +104,6 @@ body {
 }
 .copy-row:hover .copy-icon { opacity: 1; }
 
-/* ─── NEW badge ──────────────────────────────────────────────────── */
 @keyframes new-fade {
   0%, 70% { opacity: 1; }
   100%     { opacity: 0; }
@@ -126,14 +113,13 @@ body {
   font-size: 9px;
   letter-spacing: 0.07em;
   color: var(--green);
-  border: 1px solid rgba(0,214,122,0.28);
-  background: rgba(0,214,122,0.07);
+  border: 1px solid rgba(22,163,74,0.28);
+  background: rgba(22,163,74,0.07);
   padding: 2px 6px;
   border-radius: 3px;
   animation: new-fade 30s forwards;
 }
 
-/* ─── Code/mono tags ─────────────────────────────────────────────── */
 .mono-tag {
   font-family: "JetBrains Mono", monospace;
   font-size: 11px;
@@ -141,12 +127,10 @@ body {
   letter-spacing: 0.06em;
 }
 
-/* ─── Scrollbar ──────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.07); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 2px; }
 
-/* ─── Reduce motion ──────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;

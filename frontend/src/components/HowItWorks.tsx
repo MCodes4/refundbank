@@ -16,7 +16,7 @@ const PHASES = [
   {
     time: "t+120s",
     title: "The treasury empties.",
-    body: "The collected fees are claimed and distributed to the top twenty wallets on the ranked list — proportional to their loss. No claim. No vote. The SOL just arrives. Then the cycle resets.",
+    body: "The collected fees are claimed and distributed to the top twenty wallets on the ranked list, proportional to their loss. No claim. No vote. The SOL just arrives. Then the cycle resets.",
   },
 ];
 
@@ -30,7 +30,6 @@ export default function HowItWorks() {
       className={`reveal ${inView ? "visible" : ""}`}
       style={{ borderTop: "1px solid var(--border)" }}
     >
-      {/* Header */}
       <div className="px-6 sm:px-8 pt-8 pb-6">
         <h2
           className="section-label text-xl font-medium"
@@ -43,7 +42,6 @@ export default function HowItWorks() {
         </p>
       </div>
 
-      {/* Timeline */}
       <div style={{ borderTop: "1px solid var(--border)" }}>
         {PHASES.map((phase, i) => (
           <div
@@ -51,14 +49,12 @@ export default function HowItWorks() {
             className="px-6 sm:px-8 py-7 flex gap-6 sm:gap-10"
             style={{ borderBottom: "1px solid var(--border)" }}
           >
-            {/* Time marker */}
             <div className="flex-shrink-0 pt-0.5" style={{ minWidth: "4rem" }}>
               <span
                 style={{
                   fontFamily: "JetBrains Mono, monospace",
                   fontSize: "11px",
-                  color: "var(--gold)",
-                  opacity: 0.7,
+                  color: "var(--text-3)",
                   letterSpacing: "0.04em",
                 }}
               >
@@ -66,7 +62,6 @@ export default function HowItWorks() {
               </span>
             </div>
 
-            {/* Content */}
             <div className="flex-1">
               <h3
                 className="text-base font-medium mb-2"

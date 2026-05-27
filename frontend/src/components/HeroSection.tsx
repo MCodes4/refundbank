@@ -24,7 +24,6 @@ export default function HeroSection({ lastRefundAt, token }: Props) {
       ref={ref}
       className={`pt-36 pb-24 reveal ${inView ? "visible" : ""}`}
     >
-      {/* Tag */}
       <div className="mb-10">
         <span
           style={{
@@ -35,38 +34,34 @@ export default function HeroSection({ lastRefundAt, token }: Props) {
           }}
         >
           Solana · pump.fun · automated
-          {token?.symbol && (
-            <span style={{ color: "var(--gold)", marginLeft: "8px", opacity: 0.7 }}>
-              · ${token.symbol}
-            </span>
-          )}
+          <span style={{ color: "var(--text-2)", marginLeft: "8px", opacity: 0.7 }}>
+            · $refundbank
+          </span>
         </span>
       </div>
 
-      {/* Headline */}
       <h1
         className="text-5xl sm:text-7xl lg:text-8xl font-medium leading-[1.05] mb-9"
         style={{
           fontFamily: "Newsreader, Georgia, serif",
           letterSpacing: "-0.03em",
           maxWidth: "760px",
+          color: "var(--text-1)",
         }}
       >
         Built for<br />bagholders.
       </h1>
 
-      {/* Body copy */}
       <p
         className="text-base sm:text-lg leading-relaxed mb-10 max-w-xl"
         style={{ color: "var(--text-2)" }}
       >
         RefundBank is a coin that pays you back. Every trade contributes one
-        percent to a treasury. Every two minutes the treasury empties — straight
+        percent to a treasury. Every two minutes the treasury empties, straight
         to the wallets sitting deepest in the red. No claim button. No vote.
         The bank just pays.
       </p>
 
-      {/* CTAs */}
       <div className="flex flex-wrap items-center gap-4 mb-12">
         {token?.pump_fun_url && (
           <a
@@ -76,49 +71,46 @@ export default function HeroSection({ lastRefundAt, token }: Props) {
             className="px-5 py-2.5 text-sm transition-all duration-150"
             style={{
               fontFamily: "Inter, sans-serif",
-              color: "var(--green)",
-              border: "1px solid rgba(0,214,122,0.3)",
-              borderRadius: "4px",
-              background: "rgba(0,214,122,0.06)",
+              color: "var(--surface)",
+              background: "var(--text-1)",
+              borderRadius: "3px",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(0,214,122,0.12)")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(0,214,122,0.06)")}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
           >
             Buy on pump.fun
           </a>
         )}
         <a
-          href="#ledger"
+          href="/ledger"
           className="px-5 py-2.5 text-sm transition-all duration-150"
           style={{
             fontFamily: "Inter, sans-serif",
-            color: "var(--gold)",
-            border: "1px solid rgba(212,175,55,0.4)",
-            borderRadius: "4px",
-            background: "rgba(212,175,55,0.07)",
+            color: "var(--text-1)",
+            border: "1px solid var(--border-2)",
+            borderRadius: "3px",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(212,175,55,0.13)")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(212,175,55,0.07)")}
+          onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--text-1)")}
+          onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-2)")}
         >
           Open the ledger
         </a>
         <a
-          href="#how"
+          href="/how"
           className="px-5 py-2.5 text-sm transition-all duration-150"
           style={{
             fontFamily: "Inter, sans-serif",
-            color: "var(--text-2)",
+            color: "var(--text-3)",
             border: "1px solid var(--border)",
-            borderRadius: "4px",
+            borderRadius: "3px",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-1)")}
-          onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-2)")}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-2)")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-3)")}
         >
           How it pays
         </a>
       </div>
 
-      {/* Status */}
       <div className="flex items-center gap-2.5">
         <span className="live-dot" />
         <span

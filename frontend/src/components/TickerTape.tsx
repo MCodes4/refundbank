@@ -27,7 +27,7 @@ export default function TickerTape({ distributions }: Props) {
         borderTop: "1px solid var(--border)",
         borderBottom: "1px solid var(--border)",
         height: "32px",
-        background: "rgba(255,255,255,0.015)",
+        background: "var(--surface)",
       }}
     >
       <div className="ticker-track inline-flex items-center h-full">
@@ -37,7 +37,7 @@ export default function TickerTape({ distributions }: Props) {
             className="inline-flex items-center gap-3 px-7"
             style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px" }}
           >
-            <span style={{ color: "var(--gold)", opacity: 0.5 }}>◆</span>
+            <span style={{ color: "var(--text-3)", opacity: 0.5 }}>·</span>
             <span style={{ color: "var(--text-3)" }}>{text}</span>
           </span>
         ))}
