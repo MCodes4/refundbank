@@ -24,6 +24,9 @@ enabled = true
 enabled = true
 site_url = "http://localhost:3000"
 
+[functions.detect-new-launch]
+verify_jwt = false
+
 [functions.claim-fees]
 verify_jwt = false
 

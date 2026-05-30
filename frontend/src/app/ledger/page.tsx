@@ -83,7 +83,7 @@ export default function LedgerPage() {
               marginBottom: "12px",
             }}
           >
-            REFUNDBANK / LEDGER
+            PAYBACK / LEDGER
           </p>
           <h1
             className="text-4xl sm:text-6xl font-medium"
@@ -100,7 +100,7 @@ export default function LedgerPage() {
             className="mt-4 text-sm"
             style={{ color: "var(--text-2)", maxWidth: "480px", lineHeight: 1.7 }}
           >
-            Every refund dispatched, on-chain, in order.
+            Every payback dispatched, on-chain, in order.
             The queue shows who receives the next cycle.
           </p>
         </div>

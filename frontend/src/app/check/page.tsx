@@ -64,7 +64,7 @@ export default function CheckPage() {
               marginBottom: "12px",
             }}
           >
-            REFUNDBANK / CHECK
+            PAYBACK / CHECK
           </p>
           <h1
             className="text-4xl sm:text-6xl font-medium"
@@ -81,7 +81,7 @@ export default function CheckPage() {
             className="mt-4 text-sm"
             style={{ color: "var(--text-2)", maxWidth: "480px", lineHeight: 1.7 }}
           >
-            Paste a wallet address to see its position in the refund queue,
+            Paste a wallet address to see its position in the payback queue,
             total loss, and estimated share of the next cycle.
           </p>
         </div>

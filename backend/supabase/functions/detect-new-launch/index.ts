@@ -108,11 +108,25 @@ serve(async () => {
             name   = assetData?.result?.content?.metadata?.name   ?? null;
           } catch { /* metadata optional */ }
 
-          // Deactivate old token
+          // Deactivate old token and clear its holder data
+          const { data: oldTokens } = await supabase
+            .from("active_token")
+            .select("mint_address")
+            .eq("is_active", true);
+
           await supabase
             .from("active_token")
             .update({ is_active: false })
             .eq("is_active", true);
+
+          if (oldTokens?.length) {
+            for (const old of oldTokens) {
+              await supabase
+                .from("holders")
+                .delete()
+                .eq("mint_address", old.mint_address);
+            }
+          }
 
           // Insert new active token
           await supabase.from("active_token").insert({

@@ -21,7 +21,7 @@ const COLS = [
   {
     heading: "Reach",
     links: [
-      { label: "@refundbankfun", href: "https://x.com/refundbankfun", external: true },
+      { label: "@paybackfun", href: "https://x.com/paybackfun", external: true },
       { label: "Dexscreener",    href: "https://dexscreener.com",      external: true },
       { label: "pump.fun",       href: "https://pump.fun",             external: true },
     ],
@@ -67,7 +67,7 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
                 color: "var(--text-1)",
               }}
             >
-              refundbank.
+              Payback.
             </p>
             <p
               className="text-sm leading-relaxed"
@@ -176,7 +176,7 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
                           color:      "var(--text-3)",
                         }}
                       >
-                        {formatSol(t.total_paid_out, 3)} SOL refunded
+                        {formatSol(t.total_paid_out, 3)} SOL paid out
                       </span>
                     )}
                     {t.pump_fun_url && (
@@ -214,7 +214,7 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
               color: "var(--text-3)",
             }}
           >
-            refundbank v0.1 · Solana devnet · 2026
+            Payback v0.1 · Solana · 2026
           </p>
           <p
             className="text-right max-w-sm"

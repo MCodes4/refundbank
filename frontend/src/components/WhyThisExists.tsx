@@ -30,9 +30,9 @@ export default function WhyThisExists() {
             bagholders.
           </p>
           <p>
-            RefundBank inverts the geometry. The deeper your bag, the more the
+            Payback inverts the geometry. The deeper your bag, the more the
             protocol pays you. Not as charity. As mechanism. Every trade, yours,
-            mine, the sniper's, funds the refund pool. Every two minutes, the pool
+            mine, the sniper's, funds the pool. Every two minutes, the pool
             empties to whoever is bleeding hardest.
           </p>
           <p>

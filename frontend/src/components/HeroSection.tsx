@@ -35,7 +35,7 @@ export default function HeroSection({ lastRefundAt, token }: Props) {
         >
           Solana · pump.fun · automated
           <span style={{ color: "var(--text-2)", marginLeft: "8px", opacity: 0.7 }}>
-            · $refundbank
+            · $Payback
           </span>
         </span>
       </div>
@@ -56,10 +56,10 @@ export default function HeroSection({ lastRefundAt, token }: Props) {
         className="text-base sm:text-lg leading-relaxed mb-10 max-w-xl"
         style={{ color: "var(--text-2)" }}
       >
-        RefundBank is a coin that pays you back. Every trade contributes one
+        Payback is a coin that pays you back. Every trade contributes one
         percent to a treasury. Every two minutes the treasury empties, straight
         to the wallets sitting deepest in the red. No claim button. No vote.
-        The bank just pays.
+        It just pays.
       </p>
 
       <div className="flex flex-wrap items-center gap-4 mb-12">

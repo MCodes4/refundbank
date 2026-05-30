@@ -74,14 +74,15 @@ serve(async (req) => {
       );
     }
 
-    // Fetch top losers, applying filters
+    // Fetch top losers for this mint only
     const { data: losers, error: losersErr } = await supabase
       .from("holders")
       .select("wallet, current_value_sol, total_invested_sol, pnl_sol")
-      .lt("pnl_sol", 0)                      // only holders in the red
-      .gte("current_value_sol", minHolderValue)  // anti-dust
-      .gte("total_invested_sol", minInvested)    // anti-farming
-      .order("pnl_sol", { ascending: true })     // most negative first
+      .eq("mint_address", activeMint)
+      .lt("pnl_sol", 0)
+      .gte("current_value_sol", minHolderValue)
+      .gte("total_invested_sol", minInvested)
+      .order("pnl_sol", { ascending: true })
       .limit(topCount);
 
     if (losersErr) throw losersErr;

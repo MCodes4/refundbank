@@ -17,7 +17,7 @@ const PAGES = [
     href:  "/ledger",
     label: "Ledger",
     tag:   "LIVE",
-    desc:  "Every refund dispatched, on-chain, in order. The queue shows the twenty wallets receiving the next cycle.",
+    desc:  "Every payback dispatched, on-chain, in order. The queue shows the twenty wallets receiving the next cycle.",
   },
   {
     href:  "/vault",
@@ -90,7 +90,7 @@ export default function Home() {
   const stats = [
     { label: "In vault",       val: inVaultSol.toFixed(3),             suffix: "SOL" },
     { label: "Paid out",       val: totalPaidOut.toFixed(3),           suffix: "SOL" },
-    { label: "Wallets",        val: walletsRefunded.toLocaleString(),   suffix: ""    },
+    { label: "Paid",           val: walletsRefunded.toLocaleString(),   suffix: ""    },
     { label: "Cycles",         val: cyclesDispatched.toLocaleString(),  suffix: ""    },
   ];
 

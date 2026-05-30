@@ -10,7 +10,7 @@ const NAV = [
   { label: "Vault",  href: "/vault"  },
   { label: "Docs",   href: "/how"    },
   { label: "Check",  href: "/check"  },
-  { label: "X",      href: "https://x.com/refundbankfun", external: true },
+  { label: "X",      href: "https://x.com/paybackfun", external: true },
 ];
 
 export default function Header({ token }: { token: ActiveToken | null }) {
@@ -38,7 +38,7 @@ export default function Header({ token }: { token: ActiveToken | null }) {
             src="/logo.svg"
             width="22"
             height="22"
-            alt="refundbank logo"
+            alt="Payback logo"
             style={{ borderRadius: "4px", display: "block" }}
           />
           <span
@@ -49,9 +49,9 @@ export default function Header({ token }: { token: ActiveToken | null }) {
               letterSpacing: "-0.01em",
             }}
           >
-            refundbank
+            Payback
             <span style={{ color: "var(--text-3)", fontSize: "10px", marginLeft: "4px" }}>
-              $refundbank
+              $Payback
             </span>
           </span>
         </Link>

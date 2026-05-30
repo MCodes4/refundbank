@@ -34,6 +34,14 @@ serve(async (req) => {
     const maxPayoutPct     = parseFloat(cfg["max_single_payout_pct"]   ?? "0.05");
     const topCount         = parseInt(cfg["top_losers_count"]          ?? "20", 10);
 
+    // Resolve active mint
+    const { data: activeToken } = await supabase
+      .from("active_token")
+      .select("mint_address")
+      .eq("is_active", true)
+      .single();
+    const activeMint: string | null = activeToken?.mint_address ?? Deno.env.get("TOKEN_MINT_ADDRESS") ?? null;
+
     // Setup Solana
     const rpcUrl = Deno.env.get("SOLANA_RPC_URL")!;
     const connection = new Connection(rpcUrl, "confirmed");
@@ -52,15 +60,21 @@ serve(async (req) => {
       );
     }
 
-    // Fetch top losers, applying filters
-    const { data: losers, error: losersErr } = await supabase
+    // Fetch top losers for the active mint, applying filters
+    let losersQuery = supabase
       .from("holders")
       .select("wallet, current_value_sol, total_invested_sol, pnl_sol")
-      .lt("pnl_sol", 0)                      // only holders in the red
-      .gte("current_value_sol", minHolderValue)  // anti-dust
-      .gte("total_invested_sol", minInvested)    // anti-farming
-      .order("pnl_sol", { ascending: true })     // most negative first
+      .lt("pnl_sol", 0)
+      .gte("current_value_sol", minHolderValue)
+      .gte("total_invested_sol", minInvested)
+      .order("pnl_sol", { ascending: true })
       .limit(topCount);
+
+    if (activeMint) {
+      losersQuery = losersQuery.eq("mint_address", activeMint);
+    }
+
+    const { data: losers, error: losersErr } = await losersQuery;
 
     if (losersErr) throw losersErr;
     if (!losers || losers.length === 0) {
@@ -144,6 +158,7 @@ serve(async (req) => {
         amount_sol: alloc.amountSol,
         tx_signature: signature,
         status,
+        mint_address: activeMint,
       }));
 
       await supabase.from("distributions").insert(insertRows);

@@ -213,6 +213,7 @@ serve(async () => {
 
           return {
             wallet: holder.owner,
+            mint_address: mintAddress,
             token_balance: holder.balance,
             total_invested_sol: totalInvestedSol,
             current_value_sol: currentValueSol,
@@ -230,10 +231,10 @@ serve(async () => {
       }
     }
 
-    // Upsert all holders
+    // Upsert all holders (composite PK: wallet + mint_address)
     const { error } = await supabase
       .from("holders")
-      .upsert(upsertRows, { onConflict: "wallet" });
+      .upsert(upsertRows, { onConflict: "wallet,mint_address" });
 
     if (error) throw error;
 
