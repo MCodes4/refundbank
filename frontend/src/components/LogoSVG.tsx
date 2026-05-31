@@ -6,7 +6,7 @@ export default function LogoSVG({ size = 64 }: { size?: number }) {
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="Payback logo"
+      aria-label="Paybag logo"
     >
       {/* Outer vault ring */}
       <circle cx="24" cy="24" r="22" stroke="#D4AF37" strokeWidth="1.2" opacity="0.45" />

@@ -102,7 +102,7 @@ export default function CheckWallet({ allHolders }: { allHolders: Holder[] }) {
             className="mt-5 text-sm"
             style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "12px", color: "var(--text-3)" }}
           >
-            Not found. Wallet may not hold $Payback or has not been scanned yet.
+            Not found. Wallet may not hold $Paybag or has not been scanned yet.
           </p>
         )}
 
@@ -120,7 +120,7 @@ export default function CheckWallet({ allHolders }: { allHolders: Holder[] }) {
                 <span style={{ color: "var(--green)", fontFamily: "JetBrains Mono, monospace" }}>
                   #{rank}
                 </span>
-                {" "}in the queue. In the next payback cycle.
+                {" "}in the queue. In the next paybag cycle.
                 {estimatedShare !== null && (
                   <>
                     {" "}Estimated share:{" "}

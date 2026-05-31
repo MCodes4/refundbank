@@ -26,7 +26,7 @@ export default function HowPage() {
               marginBottom: "12px",
             }}
           >
-            PAYBACK / DOCS
+            PAYBAG / DOCS
           </p>
           <h1
             className="text-4xl sm:text-6xl font-medium"

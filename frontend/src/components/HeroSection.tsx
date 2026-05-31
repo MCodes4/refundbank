@@ -35,7 +35,7 @@ export default function HeroSection({ lastRefundAt, token }: Props) {
         >
           Solana · pump.fun · automated
           <span style={{ color: "var(--text-2)", marginLeft: "8px", opacity: 0.7 }}>
-            · $Payback
+            · $Paybag
           </span>
         </span>
       </div>
@@ -56,7 +56,7 @@ export default function HeroSection({ lastRefundAt, token }: Props) {
         className="text-base sm:text-lg leading-relaxed mb-10 max-w-xl"
         style={{ color: "var(--text-2)" }}
       >
-        Payback is a coin that pays you back. Every trade contributes one
+        Paybag is a coin that pays you back. Every trade contributes one
         percent to a treasury. Every two minutes the treasury empties, straight
         to the wallets sitting deepest in the red. No claim button. No vote.
         It just pays.

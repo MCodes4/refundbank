@@ -77,7 +77,7 @@ export default function VaultPage() {
               marginBottom: "12px",
             }}
           >
-            PAYBACK / VAULT
+            PAYBAG / VAULT
           </p>
           <h1
             className="text-4xl sm:text-6xl font-medium"

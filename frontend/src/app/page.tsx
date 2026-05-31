@@ -17,7 +17,7 @@ const PAGES = [
     href:  "/ledger",
     label: "Ledger",
     tag:   "LIVE",
-    desc:  "Every payback dispatched, on-chain, in order. The queue shows the twenty wallets receiving the next cycle.",
+    desc:  "Every payout dispatched, on-chain, in order. The queue shows the twenty wallets receiving the next cycle.",
   },
   {
     href:  "/vault",

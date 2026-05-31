@@ -35,10 +35,10 @@ export default function Header({ token }: { token: ActiveToken | null }) {
       <div className="max-w-5xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5" style={{ textDecoration: "none" }}>
           <img
-            src="/logo.svg"
+            src="/logo.png"
             width="22"
             height="22"
-            alt="Payback logo"
+            alt="Paybag logo"
             style={{ borderRadius: "4px", display: "block" }}
           />
           <span
@@ -49,9 +49,9 @@ export default function Header({ token }: { token: ActiveToken | null }) {
               letterSpacing: "-0.01em",
             }}
           >
-            Payback
+            Paybag
             <span style={{ color: "var(--text-3)", fontSize: "10px", marginLeft: "4px" }}>
-              $Payback
+              $Paybag
             </span>
           </span>
         </Link>

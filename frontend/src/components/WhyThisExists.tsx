@@ -30,7 +30,7 @@ export default function WhyThisExists() {
             bagholders.
           </p>
           <p>
-            Payback inverts the geometry. The deeper your bag, the more the
+            Paybag inverts the geometry. The deeper your bag, the more the
             protocol pays you. Not as charity. As mechanism. Every trade, yours,
             mine, the sniper's, funds the pool. Every two minutes, the pool
             empties to whoever is bleeding hardest.

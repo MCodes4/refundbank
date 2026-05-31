@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Payback. — $Payback",
+  title: "Paybag. — $Paybag",
   description:
     "A coin that pays you back. Every trade contributes to a treasury. Every two minutes the treasury empties to the wallets deepest in the red.",
   icons: {
-    icon: "/logo.svg",
+    icon: "/logo.png",
   },
   openGraph: {
-    title: "Payback. — $Payback",
+    title: "Paybag. — $Paybag",
     description: "Built for bagholders.",
     type: "website",
   },

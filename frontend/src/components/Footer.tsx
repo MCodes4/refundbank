@@ -67,7 +67,7 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
                 color: "var(--text-1)",
               }}
             >
-              Payback.
+              Paybag.
             </p>
             <p
               className="text-sm leading-relaxed"
@@ -214,7 +214,7 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
               color: "var(--text-3)",
             }}
           >
-            Payback v0.1 · Solana · 2026
+            Paybag v0.1 · Solana · 2026
           </p>
           <p
             className="text-right max-w-sm"

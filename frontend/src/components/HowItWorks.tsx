@@ -6,12 +6,12 @@ const PHASES = [
   {
     time: "t+0s",
     title: "Volume happens.",
-    body: "A buy or sell executes on pump.fun. One percent of the trade value is routed to the Payback creator fee account. The trader pays it without thinking about it.",
+    body: "A buy or sell executes on pump.fun. One percent of the trade value is routed to the Paybag creator fee account. The trader pays it without thinking about it.",
   },
   {
     time: "t+45s",
     title: "Holders are ranked.",
-    body: "An automated scan reads every wallet holding $Payback. Each wallet's total SOL invested is compared against the current value of its tokens. The result is a ranked list, deepest loss at the top.",
+    body: "An automated scan reads every wallet holding $Paybag. Each wallet's total SOL invested is compared against the current value of its tokens. The result is a ranked list, deepest loss at the top.",
   },
   {
     time: "t+120s",
