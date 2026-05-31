@@ -21,9 +21,9 @@ const PAGES = [
   },
   {
     href:  "/vault",
-    label: "Vault",
+    label: "Paybag",
     tag:   "STATS",
-    desc:  "How much SOL is in the bank right now, lifetime paid out, wallets refunded, and cycles dispatched.",
+    desc:  "How much SOL is in the paybag right now, lifetime paid out, wallets refunded, and cycles dispatched.",
   },
   {
     href:  "/how",
@@ -88,7 +88,7 @@ export default function Home() {
   const lastRefundAt     = distributions[0]?.distributed_at ?? null;
 
   const stats = [
-    { label: "In vault",       val: inVaultSol.toFixed(3),             suffix: "SOL" },
+    { label: "In paybag",      val: inVaultSol.toFixed(3),             suffix: "SOL" },
     { label: "Paid out",       val: totalPaidOut.toFixed(3),           suffix: "SOL" },
     { label: "Paid",           val: walletsRefunded.toLocaleString(),   suffix: ""    },
     { label: "Cycles",         val: cyclesDispatched.toLocaleString(),  suffix: ""    },

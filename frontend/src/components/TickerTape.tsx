@@ -6,7 +6,7 @@ import { shortWallet, formatSol } from "@/lib/format";
 interface Props { distributions: Distribution[]; }
 
 const PLACEHOLDER = [
-  "Vault initialising",
+  "Paybag initialising",
   "First refund pending",
   "Waiting for volume",
 ];

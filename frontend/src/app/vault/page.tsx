@@ -77,7 +77,7 @@ export default function VaultPage() {
               marginBottom: "12px",
             }}
           >
-            PAYBAG / VAULT
+            PAYBAG / BAG
           </p>
           <h1
             className="text-4xl sm:text-6xl font-medium"
@@ -88,7 +88,7 @@ export default function VaultPage() {
               maxWidth: "600px",
             }}
           >
-            The vault.
+            The paybag.
           </h1>
           <p
             className="mt-4 text-sm"

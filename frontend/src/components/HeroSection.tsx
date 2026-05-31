@@ -120,7 +120,7 @@ export default function HeroSection({ lastRefundAt, token }: Props) {
             color: "var(--text-2)",
           }}
         >
-          Vault active
+          Paybag active
           {lastRefundAt && (
             <span style={{ color: "var(--text-3)", marginLeft: "8px" }}>
               · last refund {timeAgo(lastRefundAt)}

@@ -28,7 +28,7 @@ export default function NewLaunchBanner({ token, onDismiss }: Props) {
             color:      "var(--green)",
           }}
         >
-          New launch detected: {ticker}. Vault reset.
+          New launch detected: {ticker}. Paybag reset.
         </span>
         {token.pump_fun_url && (
           <a

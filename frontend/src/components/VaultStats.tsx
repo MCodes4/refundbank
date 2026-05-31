@@ -70,7 +70,7 @@ export default function VaultStats({ inVaultSol, paidOutSol, walletsRefunded, cy
           className="section-label text-xl font-medium"
           style={{ fontFamily: "Newsreader, serif", letterSpacing: "-0.02em" }}
         >
-          The vault.
+          The paybag.
         </h2>
         <p className="mt-2 text-sm" style={{ color: "var(--text-2)" }}>
           How much SOL is in the bank, where it came from, where it is going.
@@ -81,7 +81,7 @@ export default function VaultStats({ inVaultSol, paidOutSol, walletsRefunded, cy
         className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0"
         style={{ borderColor: "var(--border)" } as React.CSSProperties}
       >
-        <StatItem label="In the vault"      value={inVaultSol}       suffix="SOL" loading={loading} />
+        <StatItem label="In the paybag"     value={inVaultSol}       suffix="SOL" loading={loading} />
         <StatItem label="Paid out lifetime" value={paidOutSol}       suffix="SOL" loading={loading} />
         <StatItem label="Wallets refunded"  value={walletsRefunded}  decimals={0} loading={loading} />
         <StatItem label="Refunds sent"      value={cyclesDispatched} decimals={0} loading={loading} />

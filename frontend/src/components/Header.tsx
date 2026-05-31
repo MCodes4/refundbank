@@ -7,7 +7,7 @@ import { type ActiveToken } from "@/lib/supabase";
 
 const NAV = [
   { label: "Ledger", href: "/ledger" },
-  { label: "Vault",  href: "/vault"  },
+  { label: "Paybag", href: "/vault"  },
   { label: "Docs",   href: "/how"    },
   { label: "Check",  href: "/check"  },
   { label: "X",      href: "https://x.com/paybackfun", external: true },
