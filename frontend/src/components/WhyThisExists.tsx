@@ -16,7 +16,7 @@ export default function WhyThisExists() {
           className="section-label text-xl font-medium mb-8"
           style={{ fontFamily: "Newsreader, serif", letterSpacing: "-0.02em" }}
         >
-          Why a bank for bagholders.
+          Why a bag for bagholders.
         </h2>
 
         <div
@@ -38,7 +38,7 @@ export default function WhyThisExists() {
           <p>
             The system has no opinion about whether you should be holding. It just
             notices that you are, and that you are down, and it sends you SOL. That
-            is all a bank is supposed to do.
+            is what a bag is supposed to do.
           </p>
         </div>
       </div>

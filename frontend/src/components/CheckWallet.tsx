@@ -52,7 +52,7 @@ export default function CheckWallet({ allHolders }: { allHolders: Holder[] }) {
           Are you in line?
         </h2>
         <p className="mt-2 mb-8 text-sm" style={{ color: "var(--text-2)" }}>
-          Paste a wallet address to see its position, loss, and share of the next cycle.
+          Paste a wallet address to see its position, loss, and share of the next drop.
         </p>
 
         <div className="flex gap-3 max-w-xl">
@@ -120,7 +120,7 @@ export default function CheckWallet({ allHolders }: { allHolders: Holder[] }) {
                 <span style={{ color: "var(--green)", fontFamily: "JetBrains Mono, monospace" }}>
                   #{rank}
                 </span>
-                {" "}in the queue. In the next paybag cycle.
+                {" "}in the queue. In the next drop.
                 {estimatedShare !== null && (
                   <>
                     {" "}Estimated share:{" "}

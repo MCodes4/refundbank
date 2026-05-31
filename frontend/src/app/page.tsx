@@ -17,19 +17,19 @@ const PAGES = [
     href:  "/ledger",
     label: "Ledger",
     tag:   "LIVE",
-    desc:  "Every payout dispatched, on-chain, in order. The queue shows the twenty wallets receiving the next cycle.",
+    desc:  "Every drop dispatched, on-chain, in order. The queue shows the twenty wallets receiving the next drop.",
   },
   {
     href:  "/vault",
     label: "Paybag",
     tag:   "STATS",
-    desc:  "How much SOL is in the paybag right now, lifetime paid out, wallets refunded, and cycles dispatched.",
+    desc:  "How much SOL is in the paybag right now, lifetime paid out, wallets paid, and drops sent.",
   },
   {
     href:  "/how",
     label: "Docs",
     tag:   "MECHANICS",
-    desc:  "The three-event cycle. Volume happens, holders are ranked, the treasury empties. Every two minutes.",
+    desc:  "Three events. Every two minutes. Volume, ranking, drop. The bag empties automatically.",
   },
   {
     href:  "/check",
@@ -91,7 +91,7 @@ export default function Home() {
     { label: "In paybag",      val: inVaultSol.toFixed(3),             suffix: "SOL" },
     { label: "Paid out",       val: totalPaidOut.toFixed(3),           suffix: "SOL" },
     { label: "Paid",           val: walletsRefunded.toLocaleString(),   suffix: ""    },
-    { label: "Cycles",         val: cyclesDispatched.toLocaleString(),  suffix: ""    },
+    { label: "Drops",          val: cyclesDispatched.toLocaleString(),  suffix: ""    },
   ];
 
   return (

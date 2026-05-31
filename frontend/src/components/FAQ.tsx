@@ -6,7 +6,7 @@ import { useInView } from "@/hooks/useInView";
 const FAQS = [
   {
     q: "What stops dust wallets from gaming this?",
-    a: "The system enforces two filters automatically: wallets must hold tokens with a current value of at least 0.05 SOL, and must have invested at least 0.1 SOL total. Wallets below these thresholds are excluded from the refund queue entirely.",
+    a: "The system enforces two filters automatically: wallets must hold tokens with a current value of at least 0.05 SOL, and must have invested at least 0.1 SOL total. Wallets below these thresholds are excluded from the drop queue entirely.",
   },
   {
     q: "Why proportional and not an equal split?",
@@ -14,15 +14,15 @@ const FAQS = [
   },
   {
     q: "What happens when the coin pumps?",
-    a: "Fees keep flowing as long as people trade — buy or sell. A pumping coin means more volume, which means more fees entering the treasury, which means larger refund cycles. Holders in profit don't receive refunds, but they benefit from price appreciation.",
+    a: "Fees keep flowing as long as people trade — buy or sell. A pumping coin means more volume, which means more fees entering the treasury, which means larger drops. Holders in profit don't receive drops, but they benefit from price appreciation.",
   },
   {
     q: "Is this audited?",
     a: "The smart contract is the pump.fun bonding curve — audited by pump.fun. The redistribution logic runs as open, verifiable edge functions. Every transaction is on-chain and can be verified on Solscan.",
   },
   {
-    q: "Can I claim my refund manually?",
-    a: "No. The system does it for you automatically, every 30 minutes. If you qualify, SOL arrives in your wallet without any action required. There is no claim button.",
+    q: "Can I claim my drop manually?",
+    a: "No. The system does it for you automatically, every two minutes. If you qualify, SOL arrives in your wallet without any action required. There is no claim button.",
   },
 ];
 

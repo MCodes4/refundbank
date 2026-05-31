@@ -68,17 +68,17 @@ export default function StatsStripe({ totalClaimedSol, totalDistributed, refunds
           <Stat label="Fees collected"      value={totalClaimedSol}  suffix="SOL" loading={loading} />
         </div>
         <div className="px-6 sm:px-8">
-          <Stat label="Total refunded"      value={totalDistributed} suffix="SOL" loading={loading} />
+          <Stat label="Total dropped"       value={totalDistributed} suffix="SOL" loading={loading} />
         </div>
         <div className="px-6 sm:px-8">
-          <Stat label="Refunds dispatched"  value={refundsIssued}    decimals={0} loading={loading} />
+          <Stat label="Drops sent"          value={refundsIssued}    decimals={0} loading={loading} />
         </div>
         <div className="px-6 sm:px-8 py-6 sm:py-0 flex flex-col gap-1 justify-center">
           <span
             className="text-xs uppercase tracking-widest"
             style={{ color: "var(--text-3)", fontFamily: "JetBrains Mono, monospace" }}
           >
-            Last refund—
+            Last drop—
           </span>
           <span
             className="text-sm"

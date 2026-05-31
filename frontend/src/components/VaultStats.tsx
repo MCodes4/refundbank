@@ -73,7 +73,7 @@ export default function VaultStats({ inVaultSol, paidOutSol, walletsRefunded, cy
           The paybag.
         </h2>
         <p className="mt-2 text-sm" style={{ color: "var(--text-2)" }}>
-          How much SOL is in the bank, where it came from, where it is going.
+          How much SOL is in the bag, where it came from, where it is going.
         </p>
       </div>
 
@@ -83,8 +83,8 @@ export default function VaultStats({ inVaultSol, paidOutSol, walletsRefunded, cy
       >
         <StatItem label="In the paybag"     value={inVaultSol}       suffix="SOL" loading={loading} />
         <StatItem label="Paid out lifetime" value={paidOutSol}       suffix="SOL" loading={loading} />
-        <StatItem label="Wallets refunded"  value={walletsRefunded}  decimals={0} loading={loading} />
-        <StatItem label="Refunds sent"      value={cyclesDispatched} decimals={0} loading={loading} />
+        <StatItem label="Wallets paid"       value={walletsRefunded}  decimals={0} loading={loading} />
+        <StatItem label="Drops sent"        value={cyclesDispatched} decimals={0} loading={loading} />
       </div>
     </section>
   );

@@ -34,7 +34,7 @@ export default function RefundCountdown() {
           className="text-[10px] uppercase tracking-[0.15em]"
           style={{ color: "var(--text-secondary)", fontFamily: "var(--font-mono)" }}
         >
-          Next refund cycle
+          Next drop
         </p>
         <p
           className="text-xl font-semibold num"

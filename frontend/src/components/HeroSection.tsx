@@ -123,7 +123,7 @@ export default function HeroSection({ lastRefundAt, token }: Props) {
           Paybag active
           {lastRefundAt && (
             <span style={{ color: "var(--text-3)", marginLeft: "8px" }}>
-              · last refund {timeAgo(lastRefundAt)}
+              · last drop {timeAgo(lastRefundAt)}
             </span>
           )}
         </span>

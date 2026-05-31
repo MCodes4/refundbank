@@ -101,7 +101,7 @@ export default function LedgerPage() {
             style={{ color: "var(--text-2)", maxWidth: "480px", lineHeight: 1.7 }}
           >
             Every paybag dispatched, on-chain, in order.
-            The queue shows who receives the next cycle.
+            The queue shows who receives the next drop.
           </p>
         </div>
 

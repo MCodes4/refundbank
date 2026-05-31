@@ -5,11 +5,11 @@ import { useInView } from "@/hooks/useInView";
 const POINTS = [
   {
     title: "Speed.",
-    body: "Refunds dispatch every two minutes. Other systems redistribute weekly, monthly, or never. The capital is in your wallet before the next candle closes.",
+    body: "Drops dispatch every two minutes. Other systems redistribute weekly, monthly, or never. The capital is in your wallet before the next candle closes.",
   },
   {
     title: "Targeting.",
-    body: "Fees don't get sprayed equally across all holders. They go to the wallets most underwater in absolute SOL. Equal split rewards whales who barely felt it. Loss-weighted split refunds the people actually hurt.",
+    body: "Fees don't get sprayed equally across all holders. They go to the wallets most underwater in absolute SOL. Equal split rewards whales who barely felt it. Loss-weighted split pays the people actually hurt.",
   },
   {
     title: "No claiming.",

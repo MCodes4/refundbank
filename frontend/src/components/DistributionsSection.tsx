@@ -45,7 +45,7 @@ function Countdown() {
           letterSpacing: "0.08em",
         }}
       >
-        NEXT REFUND IN
+        NEXT DROP IN
       </span>
       <span
         style={{
@@ -95,7 +95,7 @@ export default function DistributionsSection({ distributions, loading }: Props) 
             The ledger.
           </h2>
           <p className="mt-2 text-sm" style={{ color: "var(--text-2)" }}>
-            Every refund, on-chain, in order. Updated every two minutes.
+            Every drop, on-chain, in order. Updated every two minutes.
           </p>
         </div>
         <div className="pt-1">
@@ -124,7 +124,7 @@ export default function DistributionsSection({ distributions, loading }: Props) 
               color: "var(--text-3)",
             }}
           >
-            No refunds yet. The first cycle is coming.
+            No drops yet. The first drop is coming.
           </div>
         ) : (
           distributions.slice(0, 24).map((d) => {
@@ -250,7 +250,7 @@ export default function DistributionsSection({ distributions, loading }: Props) 
             borderTop: "1px solid var(--border)",
           }}
         >
-          Showing 24 of {distributions.length} refunds
+          Showing 24 of {distributions.length} drops
         </div>
       )}
     </section>

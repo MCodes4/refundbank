@@ -82,7 +82,7 @@ export default function CheckPage() {
             style={{ color: "var(--text-2)", maxWidth: "480px", lineHeight: 1.7 }}
           >
             Paste a wallet address to see its position in the paybag queue,
-            total loss, and estimated share of the next cycle.
+            total loss, and estimated share of the next drop.
           </p>
         </div>
 

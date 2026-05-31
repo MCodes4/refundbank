@@ -16,7 +16,7 @@ const PHASES = [
   {
     time: "t+120s",
     title: "The treasury empties.",
-    body: "The collected fees are claimed and distributed to the top twenty wallets on the ranked list, proportional to their loss. No claim. No vote. The SOL just arrives. Then the cycle resets.",
+    body: "The collected fees are claimed and distributed to the top twenty wallets on the ranked list, proportional to their loss. No claim. No vote. The SOL just arrives. Then it resets.",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function HowItWorks() {
           className="section-label text-xl font-medium"
           style={{ fontFamily: "Newsreader, serif", letterSpacing: "-0.02em" }}
         >
-          How the bank works.
+          How the bag works.
         </h2>
         <p className="mt-2 text-sm" style={{ color: "var(--text-2)" }}>
           Three events. Every two minutes. No exceptions.

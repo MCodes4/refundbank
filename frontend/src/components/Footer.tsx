@@ -224,7 +224,7 @@ export default function Footer({ activeMint }: { activeMint: string | null }) {
               color: "var(--text-3)",
             }}
           >
-            Refunds depend on trading volume. Not financial advice.
+            Drops depend on trading volume. Not financial advice.
           </p>
         </div>
       </div>

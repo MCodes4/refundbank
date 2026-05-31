@@ -29,7 +29,7 @@ export default function HoldersSection({ holders, loading }: Props) {
           The queue.
         </h2>
         <p className="mt-2 text-sm" style={{ color: "var(--text-2)" }}>
-          The twenty wallets deepest in the red. Next refund cycle pays these, in proportion.
+          The twenty wallets deepest in the red. Next drop pays these, in proportion.
         </p>
       </div>
 

@@ -17,8 +17,8 @@ const STEPS = [
   },
   {
     n: "03",
-    title: "Refund",
-    body: "The top twenty losses receive SOL proportional to how deep they are. A single batched transaction. The treasury empties to zero each cycle.",
+    title: "Drop",
+    body: "The top twenty losses receive SOL proportional to how deep they are. A single batched transaction. The treasury empties to zero each drop.",
     code: "treasury.batchTransfer(recipients)",
   },
 ];

@@ -5,11 +5,11 @@ import { useInView } from "@/hooks/useInView";
 const RISKS = [
   {
     title: "Volume dies.",
-    body: "No trades means no fees means no refunds. If the chart goes flat, so does the treasury.",
+    body: "No trades means no fees means no drops. If the chart goes flat, so does the bag.",
   },
   {
     title: "The coin graduates.",
-    body: "Once pump.fun graduates the token to Raydium, creator fees stop. The refund mechanism halts unless LP fees are re-routed (planned for v0.2).",
+    body: "Once pump.fun graduates the token to Raydium, creator fees stop. The drop mechanism halts unless LP fees are re-routed (planned for v0.2).",
   },
   {
     title: "You bought too small.",
@@ -17,7 +17,7 @@ const RISKS = [
   },
   {
     title: "You bought too late.",
-    body: "Refunds go to absolute SOL loss, not percentage. Someone who lost 10 SOL outranks someone who lost 90% of 0.1 SOL.",
+    body: "Drops go to absolute SOL loss, not percentage. Someone who lost 10 SOL outranks someone who lost 90% of 0.1 SOL.",
   },
   {
     title: "The treasury wallet is a single key.",

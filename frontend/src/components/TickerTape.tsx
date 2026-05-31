@@ -7,7 +7,7 @@ interface Props { distributions: Distribution[]; }
 
 const PLACEHOLDER = [
   "Paybag initialising",
-  "First refund pending",
+  "First drop pending",
   "Waiting for volume",
 ];
 
